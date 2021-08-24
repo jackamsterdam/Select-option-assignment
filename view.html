@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Select-Option-Assignment</title>
+</head>
+
+<body>
+
+    <h1>Select-options exercise <span>by Jack</span></h1>
+    <div class="container">
+
+        <label for="fruit">Choose your fruit of choice and enter a quantity</label>
+        <select name="fruit" id="fruit">
+            <option value="Smith Apples">Smith Apples 🍐</option>
+            <option value="Pink Lady Apples">Pink Lady Apples 🍎</option>
+            <option value="Hermon Apples">Hermon Apples 🍏 </option>
+            <option value="Bananas">Bananas 🍌</option>
+            <option value="Watermelon">Watermelon 🍉</option>
+            <option value="Mango">Mango 🥭</option>
+        </select>
+
+        <input type="number" name="quantity" class="quantity-box" placeholder="Enter Quantity">
+        <button type="button" onclick="calculatePtimesQ()" class="calculate-btn">Calculate Price</button>
+        <!-- <input type="submit" value="Calculate Price"> -->
+    </div>
+
+
+
+
+
+
+    <script src="controller.js"></script>
+    <script src="model.js"></script>
+</body>
+
+</html>
