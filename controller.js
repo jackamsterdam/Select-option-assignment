@@ -30,6 +30,7 @@ calcBtn.addEventListener('click', calculatePtimesQ)
 
 function calculatePtimesQ() {
     injection.style.display = "none"
+    injection.classList.add('success')
     console.log('you just clicked the calculatePtimesQ button')
     console.log('fruit.value:', fruit.value)
     console.log('quantity.value:', +quantity.value)
@@ -49,6 +50,8 @@ function calculatePtimesQ() {
 
     if (isNaN(fruitQuantity)) {
         injection.style.display = "block"
+        injection.classList.remove('success')
+        injection.classList.add('error')
         injection.innerText = 'Please enter number of kilograms only  ' /* extra space doesnt do anything? */
         return
     }
