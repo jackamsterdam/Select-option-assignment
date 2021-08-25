@@ -27,6 +27,7 @@ let injection = document.querySelector('.injection')
 calcBtn.addEventListener('click', calculatePtimesQ)
 
 
+
 function calculatePtimesQ() {
     injection.style.display = "none"
     console.log('you just clicked the calculatePtimesQ button')
@@ -57,7 +58,7 @@ function calculatePtimesQ() {
 
     function pQ() {
         let fruitPrice = fruitQuantity * priceList[fruitName]
-        console.log('fruitPrice', fruitPrice)
+            // console.log('fruitPrice', fruitPrice)
         return fruitPrice
     }
     console.log('fruitFinalPrice:', fruitFinalPrice)
@@ -66,7 +67,9 @@ function calculatePtimesQ() {
 
     function displayPayment() {
         injection.style.display = 'block';
-        injection.innerText = `You final payment is: $${fruitFinalPrice}`
+        injection.innerText = `You final payment is: $${fruitFinalPrice.toFixed(2)}`
+            //return Do i have to return???
+            //should i add Number.parseFloat(x).toFixed(2); ??
     }
 
 
@@ -99,13 +102,75 @@ function calculatePtimesQ() {
 
     // }
 
-
-
-
+    // *******************************הערה
+    // different way: by השמה of a function to the element instead of putting it directly on it.
+    // 1.instead of:(Enter your name: <input type="text" id="fname" onchange="myFunction()"></input>)
+    // do: 
+    // 2. Enter your name: <input type="text" id="fname">
+    // document.getElementById("fname").onchange = function() {
+    //   myFunction()
+    //   };
+    // function myFunction() {
+    //   var x = document.getElementById("fname");
+    //   x.value = x.value.toUpperCase(); or -->  x.value = e.target.value.toUpperCase()
+    // }
+    // 3.third way obviously is: <input type="text" id="fname">
+    //  document.getElementById('fname').addEventListener('change' myFunction) ' (without calling it)
+    // *******************************סיום הערה
 
 
 
 
 }
-console.log(priceList)
+//Taken from model.js page:
+console.log('priceList', priceList)
     // console.log(priceList.bananas) immported from model.js
+
+
+
+
+fruit.addEventListener('change', touched)
+
+function touched(e) {
+    //console.log(e.target)
+    console.log(`I saw that you might like ${e.target.value}`)
+        //console.log(e)
+}
+
+// another way to add onchange:  but i think you can add only one function like this not two. right?
+// document.getElementById("fruit").onchange = function() {
+//     console.log('hi')
+// } 
+//or just put in directly in html onchange="myFunction(); secondFunction();"
+//  הערה:
+//  document.getElementById("fruit").onchange = לא עובדsecondFunction() { אתתה לא יכול לקרא לזה כך
+//    console.log('second hi')
+//  }
+
+
+// you cant do this though because you are just reassigning the anonymous function. only the second function will work:
+// document.querySelector(".ff").onchange = function() {
+//     console.log('hi')
+// }
+// document.querySelector(".ff").onchange = function() {
+//     console.log('second hi')
+// }
+// But this works with add event listener giving multiple functions to same element when event changed happens:
+// document.querySelector('.fff').addEventListener('change', dothis)
+// document.querySelector('.fff').addEventListener('change', secondDothis)
+
+// function dothis() {
+//     console.log('addevent hi')
+// }
+
+// function secondDothis() {
+//     console.log('second addevent hi')
+// }
+
+
+
+
+
+
+let btnForRadio = document.querySelector('#btnForRadio')
+btnForRadio.addEventListener('click', calculatePtimesQ())

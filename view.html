@@ -11,12 +11,13 @@
 
 <body>
 
-    <h1>Select-options exercise <span>by Jack</span></h1>
+    <h1>Select-options Exercise <span>by Jack</span></h1>
+    <!-- <h2>Select:</h2> -->
     <div class="container">
         <!-- <form action="cart.html" method="get"> -->
         <label for="fruit">Choose your fruit of choice and enter a quantity</label>
         <br><br>
-        <select name="fruit" id="fruit">
+        <select name="fruit" id="fruit" onchange="userWentThroughList()">
             <option value="smithApples">Smith Apples 🍐</option>
             <option value="pinkLadyApples">Pink Lady Apples 🍎</option>
             <option value="hermanApples">Hermon Apples 🍏 </option>
@@ -27,8 +28,8 @@
 
         <input type="text" name="quantity" class="quantity-box" placeholder="Enter Quantity">
         <button type="submit" class="calculate-btn">Calculate Price</button>
-        <!-- Why cant i use this with modules????????????? onclick="calculatePtimesQ()" inside the button??-->
-        <!-- <input type="submit" value="Calculate Price"> -->
+        <!-- Why cant i use this with modules????????????? onclick="calculatePtimesQ()" inside the button?? onclick wont work if its referring to a different js page but addeventlistener works it binds it-->
+        <!-- <input type="submit" value="Calculate Price"> just use the button with button submit instead -->
         <!-- </form> -->
     </div>
 
@@ -38,8 +39,61 @@
 
 
 
+
+    <!-- <input type="text" name="txt" value="Hello" onchange="myFunction(this.value); secondFunction(this);"> -->
+    <!-- <input type="text" class='fff' name="txt" value="Hello"> -->
+
     <script type="module" src="controller.js"></script>
     <script type="module" src="model.js"></script>
+    <script>
+        function userWentThroughList() {
+            console.log('Your user checked the options with the select key')
+        }
+
+        // function myFunction(val) {
+        //     console.log(val)
+        // }
+
+        // function secondFunction(val) {
+        //     console.log(val)
+        // }
+    </script>
 </body>
 
 </html>
+
+
+<!-- is there a way to put an emoji in the data list? for display purposes? -->
+<!-- <h2>Datalist:</h2>
+<label for="fruit-2">Please choose a fruit and quantity:</label>
+<input type="text" id="fruit-2" name="fruit-2" list="fruits-2">
+<datalist id="fruits-2">
+      
+  <option value="smithApples">
+  <option value="pinkLadyApples">
+  <option value="hermanApples">
+  <option value="bananas">
+  <option value="watermelon">
+  <option value="mango">
+</datalist>
+
+<h2>Radio Buttons</h2> -->
+<!-- name needs to be same and value uniquely identifies them but the user doesnt see and they all have a unique id which is used by the label and JS  -->
+
+<!-- <div class="container" onchange="userWentThroughList()">
+    <label for="smith"> 🍐</label>
+    <input type="radio" name="chosen-fruit" id="smith" value="smithApples" checked>
+    <label for="pink"> 🍎</label>
+    <input type="radio" name="chosen-fruit" id="pink" value="pinkLadyApples">
+    <label for="herman"> 🍏</label>
+    <input type="radio" name="chosen-fruit" id="herman" value="hermanApples">
+    <label for="banan"> 🍌</label>
+    <input type="radio" name="chosen-fruit" id="banan" value="bananas">
+    <label for="wmelon"> 🍉</label>
+    <input type="radio" name="chosen-fruit" id="wmelon" value="watermelon">
+    <label for="mang">🥭</label>
+    <input type="radio" name="chosen-fruit" id="mang" value="mango">
+
+    <input type="text" name="quantity" class="quantity-box" id="btnForRadio" placeholder="Enter Quantity">
+    <button type="submit" class="calculate-btn">Calculate Price</button>
+</div> -->
