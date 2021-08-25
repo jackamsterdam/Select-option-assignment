@@ -30,6 +30,7 @@ calcBtn.addEventListener('click', calculatePtimesQ)
 
 function calculatePtimesQ() {
     injection.style.display = "none"
+    injection.classList.remove('error')
     injection.classList.add('success')
     console.log('you just clicked the calculatePtimesQ button')
     console.log('fruit.value:', fruit.value)
