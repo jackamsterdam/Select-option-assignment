@@ -53,3 +53,50 @@
     /* [type='submit']:hover {
     transform: scale(0.98);
 } */
+    
+    .injection.error {
+        /* text-align: center; */
+        margin: 10px auto;
+        color: red;
+        background-color: rgb(216, 226, 230);
+        font-size: 18px;
+        border: 3px solid red;
+        width: fit-content;
+    }
+    
+    .injection.success {
+        margin: 10px auto;
+        color: blue;
+        background-color: rgb(216, 226, 230);
+        font-size: 18px;
+        border: 3px solid blue;
+        width: fit-content;
+    }
+    /* Cart page styling */
+    
+    .cart-text {
+        text-align: center;
+        font-weight: bolder;
+        background-color: darkkhaki;
+        width: fit-content;
+        margin: 20px auto;
+        color: darkgreen;
+        font-size: 30px;
+        border: 5px solid black;
+    }
+    
+    .cart-img {
+        /* text-align: center; */
+        display: block;
+        margin: auto;
+        width: 300px;
+        /*these two lines also work for some reason ??but not centered in the middle:
+        float: left;
+        margin: 30px 60px; */
+        /************/
+        /*need more practice how to position it in the middle of page??:
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+    }
