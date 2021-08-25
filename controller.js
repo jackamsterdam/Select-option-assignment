@@ -56,6 +56,14 @@ function calculatePtimesQ() {
         injection.innerText = 'Please enter number of kilograms only  ' /* extra space doesnt do anything? */
         return
     }
+
+    if (fruitQuantity < 0) {
+        injection.style.display = "block"
+        injection.classList.remove('success')
+        injection.classList.add('error')
+        injection.innerText = 'Please enter a positive number only'
+        return
+    }
     /***End form validation */
 
     let fruitFinalPrice = pQ() //is there a way not to save this to a variable and use the answer outside the function?? for the switch that comes after?
