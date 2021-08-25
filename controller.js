@@ -171,6 +171,6 @@ function touched(e) {
 
 
 
-
-let btnForRadio = document.querySelector('#btnForRadio')
-btnForRadio.addEventListener('click', calculatePtimesQ())
+//so how to use the same function for multiple buttons on one page?
+// let btnForRadio = document.querySelector('#btnForRadio')
+// btnForRadio.addEventListener('click', calculatePtimesQ())
