@@ -8,6 +8,8 @@
                     /* position: relative; */
                 }
                 
+                select,
+                textarea,
                 input {
                     font-size: 16px;
                 }
